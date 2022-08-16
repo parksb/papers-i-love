@@ -17,8 +17,8 @@ jobs:
           node-version: 16
       - name: publish
         run: |
-          git config --global user.name 'bot'
-          git config --global user.email 'bot@email.com'
+          git config --global user.name 'Betty Grof'
+          git config --global user.email 'subpark1219@gmail.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/parksb/papers-i-love
           git switch gh-pages
           git pull origin main --rebase
@@ -27,4 +27,5 @@ jobs:
           npm run build
           git add -A
           git commit -m "dist: $(date)"
+          git pull origin gh-pages --rebase
           git push origin gh-pages
