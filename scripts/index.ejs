@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title><%- document.title %></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#000000">
+
+  <meta property="og:title" content="<%- document.title %>">
+  <meta property="og:image" content="https://dummyimage.com/1200x675/000000/ffffff.jpg&text=<%- document.title %>">
+
+  <meta name="twitter:title" content="<%- document.title %>">
+  <meta name="twitter:image" content="https://dummyimage.com/1200x675/000000/ffffff.jpg&text=<%- document.title %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" as="style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" as="style">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+
+  <style>
+    body { max-width: 800px; padding: 30px 30px; word-break: keep-all; word-wrap: break-word; line-height: 1.7; font-family: sans-serif; font-size: 16px; }
+    header { margin-bottom: 30px; line-height: 1.5 }
+    footer { margin-top: 30px; }
+    h1, h2, h3, h4, h5, h6 { margin-bottom: 16px; font-weight: 600; line-height: 1.25  }
+    h1, h2 { padding-bottom: .3em; border-bottom: 1px solid #eaecef; }
+    img { box-sizing: initial; max-width: 800px; width: 100%; display: block; }
+    ol, ul { padding-left: 2em; }
+    ol ol, ol ul, ul ol, ul ul { margin: 0; }
+    ul > li, ol > li { line-height: 1.7; }
+    a { color: #0366d6; text-decoration: none; }
+    a:hover { outline-width: 0; text-decoration: underline; }
+    small { font-size: 85%; color: #6a737d; font-weight: normal; }
+    h1 > code, h2 > code, li > code,  p > code { padding: .2em .4em; margin: 0; font-size: 90%; background-color: #f6f8fa; }
+    blockquote { margin: 5px 0 0 0; padding: 0 15px; color: #6a737d; border-left: .25em solid #dfe2e5; }
+    hr { color: #fdfdfd; }
+    p { margin: 0 0 1em 0; }
+    code { font-family: 'Consolas', 'Monaco', 'Ubuntu Mono', 'Andale Mono', monospace; }
+    .katex-display { background-color: #f6f8fa; padding: 20px; overflow: auto; }
+    .hljs { padding: 1em; font-size: 90%; line-height: 1.5; }
+    .table-of-contents { border-left: 1px solid #6a737d; font-size: 90%; line-height: 1.7; }
+    .table-of-contents ul { list-style-type: none; counter-reset: item; margin: 0; }
+    .table-of-contents ul li:before { content: counters(item, ".") ". "; counter-increment: item; }
+    .footnotes > .footnotes-list { padding: 0; counter-reset: list; font-size: 14px; }
+    .footnotes > .footnotes-list > .footnote-item { list-style-position: inherit; list-style: none; }
+    .footnotes > .footnotes-list > .footnote-item:before { content: "[" counter(list) "] "; counter-increment: list; }
+    .footnotes > .footnotes-list > .footnote-item > p { display: inline; }
+    .hljs{display:block;overflow-x:auto;padding:.5em;background:#282a36}.hljs-built_in,.hljs-selector-tag,.hljs-section,.hljs-link{color:#8be9fd}.hljs-keyword{color:#ff79c6}.hljs,.hljs-subst{color:#f8f8f2}.hljs-title,.hljs-attr,.hljs-meta-keyword{font-style:italic;color:#50fa7b}.hljs-string,.hljs-meta,.hljs-name,.hljs-type,.hljs-symbol,.hljs-bullet,.hljs-addition,.hljs-variable,.hljs-template-tag,.hljs-template-variable{color:#f1fa8c}.hljs-comment,.hljs-quote,.hljs-deletion{color:#6272a4}.hljs-keyword,.hljs-selector-tag,.hljs-literal,.hljs-title,.hljs-section,.hljs-doctag,.hljs-type,.hljs-name,.hljs-strong{font-weight:700}.hljs-literal,.hljs-number{color:#bd93f9}.hljs-emphasis{font-style:italic}
+  </style>
+</head>
+
+<body>
+  <header role="navigation">
+    <small>
+      <a href="index.html">💛</a> ＞
+      <a href="<%- document.filename %>.html"><%- document.filename %></a> ―
+      <a href="https://github.com/parksb/papers-i-love/commits/main/<%- document.filename %>.md">history</a> ·
+      <a href="https://raw.githubusercontent.com/parksb/papers-i-love/main/<%- document.filename %>.md">raw</a>
+    </small>
+  </header>
+
+  <main>
+    <article><%- document.html %></article>
+  </main>
+
+  <footer>
+    <small><a href="https://github.com/parksb/papers-i-love">github.com/parksb/papers-i-love</a></small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad:true });</script>
+</body>
+

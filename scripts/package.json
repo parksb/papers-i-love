@@ -1,0 +1,33 @@
+{
+  "name": "papers-i-love-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p ../build && ts-node index.ts"
+  },
+  "author": "parksb",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/ejs": "^3.1",
+    "@types/katex": "^0.14.0",
+    "@types/markdown-it": "^12.2",
+    "@types/node": "^17.0",
+    "ejs": "^3.1",
+    "highlight.js": "^11.6.0",
+    "katex": "^0.15.0",
+    "markdown-it": "^13.0",
+    "markdown-it-anchor": "^8.6",
+    "markdown-it-container": "^3.0",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-footnote": "^3.0",
+    "markdown-it-image-lazy-loading": "^1.2",
+    "markdown-it-inline-comments": "^1.0",
+    "markdown-it-mermaid": "^0.2",
+    "markdown-it-table-of-contents": "^0.6",
+    "markdown-it-task-checkbox": "^1.0.6",
+    "markdown-it-texmath": "^0.9",
+    "ts-node": "^10.7",
+    "typescript": "^4.6"
+  }
+}
