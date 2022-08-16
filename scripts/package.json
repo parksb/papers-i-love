@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p ../build && ts-node index.ts"
+    "build": "mkdir -p ../docs && ts-node index.ts"
   },
   "author": "parksb",
   "license": "MIT",

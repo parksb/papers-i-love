@@ -20,6 +20,7 @@ jobs:
           git config --global user.name 'bot'
           git config --global user.email 'bot@email.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/parksb/papers-i-love
+          git switch gh-pages
           git pull origin main --rebase
           cd scripts
           npm install

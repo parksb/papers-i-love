@@ -22,7 +22,7 @@ interface Document {
 
 (async () => {
   const MARKDOWN_DIRECTORY_PATH: string = path.join(__dirname, '..');
-  const DIST_DIRECTORY_PATH: string = path.join(__dirname, '../build');
+  const DIST_DIRECTORY_PATH: string = path.join(__dirname, '../docs');
   const TEMPLATE_FILE_PATH: Buffer = await fs.readFile(path.join(__dirname, './index.ejs'));
 
   const md: MarkdownIt = new MarkdownIt({
