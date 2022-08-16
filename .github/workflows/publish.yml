@@ -1,0 +1,29 @@
+name: publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: publish
+        run: |
+          git config --global user.name 'bot'
+          git config --global user.email 'bot@email.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/parksb/papers-i-love
+          git pull origin main --rebase
+          cd scripts
+          npm install
+          npm run build
+          git add -A
+          git commit -m "dist: $(date)"
+          git push origin gh-pages
