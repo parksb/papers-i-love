@@ -59,14 +59,7 @@ interface Document {
 
     const markdownToHtml = (markdown: string) => {
       const preContents = '[[toc]]\n\n';
-
-      const linkRegex = /\[\[(.+?)\]\]/g;
-      const labeledLinkRegex = /\[\[(.+?)\]\]\{(.+?)\}/g;
-      const html = md.render(`${preContents}${markdown}`)
-        .replace(labeledLinkRegex, '<a href="./$1.html">$2</a>')
-        .replace(linkRegex, '<a href="./$1.html">$1</a>');
-
-      return html;
+      return md.render(`${preContents}${markdown}`);
     };
 
     const writeHtmlFromMarkdown = async (filename: string) => {
@@ -80,13 +73,13 @@ interface Document {
       return document;
     };
 
-    const filenames = await fs.readdir(MARKDOWN_DIRECTORY_PATH);
-    const documents = filenames.filter((filename) => !filename.startsWith('_'))
-      .filter((filename) => path.parse(filename).ext === '.md')
+    const ignoredMarkdowns = ['README.md'];
+    const filterCondition = (filename: string) =>
+      !ignoredMarkdowns.includes(filename) && !filename.startsWith('_') && path.parse(filename).ext === '.md';
+
+    (await fs.readdir(MARKDOWN_DIRECTORY_PATH))
+      .filter(filterCondition)
       .map((filename) => path.parse(filename).name)
-      .map((filename) => writeHtmlFromMarkdown(filename));
-    const list = (await Promise.all(documents)).map((document) => `* [${document.title}](${document.filename}.html)`).join('\n');
-    const document: Document = { title: 'Papers I Love', filename: 'index', html: markdownToHtml(`# Papers I Love\n${list}`) };
-    fs.writeFile(`${DIST_DIRECTORY_PATH}/index.html`, ejs.render(String(TEMPLATE_FILE_PATH), { document }));
+      .forEach((filename) => writeHtmlFromMarkdown(filename));
 })();
 

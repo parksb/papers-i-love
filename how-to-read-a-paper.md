@@ -79,7 +79,7 @@
 
 마지막으로 가장 저명한 학회의 웹사이트에서 최근 프로시딩(proceedings)을 살펴본다. 빠르게 훑어보며 높은 품질의 관련 최근 연구를 찾을 수 있을 것이다. 이렇게 찾은 논문들과 앞서 보관해둔 논문들은 자신만의 문헌 조사를 구성하는 첫 버전이 된다. 각 논문들에 대해 두 번째 단계를 수행하면서 논문이 이전에 찾지 못했던 핵심 논문을 인용했다면 필요에 따라 반복해서 읽고, 또 읽으면 된다.
 
-## 관련연구
+## 관련 연구
 
 만약 리뷰를 하기 위해 논문을 읽고 있다면, 티모시 로스코(Timothy Roscoe)의 "Writing reviews for systems conferences"[3]를 읽을 필요가 있다. 테크니컬한 논문을 작성할 계획이라면 헤닝 슐츠린(Henning Schulzrinne)의 웹사이트[4]와 조지 화이트사이드(George Whiteside)의 논문 작성 과정에 대한 개요[5]를 참고하는 것이 좋다. 마지막으로, 사이먼 페이턴 존스(Simon Peyton Jones)의 웹사이트는 연구 실력의 전체적인 스펙트럼을 다루고 있다[2].
 
@@ -101,4 +101,4 @@ Psychology, Inc.의 이언 맥린(Iain H. McLean)은 실험 심리학 논문의 
 
 ----
 
-_원문: https://www.albany.edu/spatial/training/3-How%20to%20read%20a%20paper.pdf_
+원문: https://www.albany.edu/spatial/training/3-How%20to%20read%20a%20paper.pdf
