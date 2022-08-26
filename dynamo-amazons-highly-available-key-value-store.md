@@ -1,9 +1,8 @@
 # 다이나모: 아마존의 고가용성 키-값 저장소
 
-> Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash
-Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels
->
-> Amazon.com
+| author(s)                | title                                             | date | license         | link                                                                                                          |
+|--------------------------|---------------------------------------------------|------|-----------------|---------------------------------------------------------------------------------------------------------------|
+| Giuseppe DeCandia et al. | Dynamo: Amazon’s Highly Available Key-value Store | 2007 | CC BY-NC-SA 3.0 | [citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.1568&rep=rep1&type=pdf) |
 
 ## 초록
 
@@ -404,10 +403,6 @@ Press, New York, NY, 29-43.
 - [22] Thomas, R. H. A majority consensus approach to concurrency control for multiple copy databases. ACM Transactions on Database Systems 4 (2): 180-209, 1979.
 - [23] Weatherspoon, H., Eaton, P., Chun, B., and Kubiatowicz, J. 2007. Antiquity: exploiting a secure log for wide-area distributed storage. SIGOPS Oper. Syst. Rev. 41, 3 (Jun. 2007), 371-384.
 - [24] Welsh, M., Culler, D., and Brewer, E. 2001. SEDA: an architecture for well-conditioned, scalable internet services. In Proceedings of the Eighteenth ACM Symposium on Operating Systems Principles (Banff, Alberta, Canada, October 21 - 24, 2001). SOSP '01. ACM Press, New York, NY, 230-243.
-
-----
-
-원문: https://assets.amazon.science/ac/1d/eb50c4064c538c8ac440ce6a1d91/dynamo-amazons-highly-available-key-value-store.pdf
 
 [^1]: http://freenetproject.org/, http://www.gnutella.org
 [^2]: http://www.oracle.com/database/berkeley-db.html

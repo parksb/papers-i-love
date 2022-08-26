@@ -1,16 +1,8 @@
 # 논문 읽는 방법
 
-> How to Read a Paper
->
-> August 2, 2013
->
-> S. Keshav
->
-> David R. Cheriton School of Computer Science, University of Waterloo
->
-> Waterloo, ON, Canada
->
-> keshav@uwaterloo.ca
+| author(s) | title               | date              | link                                                                                                |
+|-----------|---------------------|-------------------|-----------------------------------------------------------------------------------------------------|
+| S. Keshav | How to Read a Paper | February 17, 2016 | [svr-sk818-web.cl.cam.ac.uk](https://svr-sk818-web.cl.cam.ac.uk/keshav/papers/07/paper-reading.pdf) |
 
 ## 초록
 
@@ -99,6 +91,3 @@ Psychology, Inc.의 이언 맥린(Iain H. McLean)은 실험 심리학 논문의 
 - [4] H. Schulzrinne, "Writing Technical Articles," http://www.cs.columbia.edu/∼hgs/etc/writing-style.html
 - [5] G.M. Whitesides, "Whitesides’ Group: Writing a Paper," http://www.ee.ucr.edu/∼rlake/Whitesides_writing_res_paper.pdf
 
-----
-
-원문: https://www.albany.edu/spatial/training/3-How%20to%20read%20a%20paper.pdf
