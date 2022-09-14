@@ -1,10 +1,12 @@
+---
+authors: "Ryan Donovan"
+title: "You should be reading academic computer science papers"
+date: "April 7, 2022"
+license: "CC BY-SA 4.0"
+link: "[stackoverflow.blog](https://stackoverflow.blog/2022/04/07/you-should-be-reading-academic-computer-science-papers)"
+---
+
 # 컴퓨터 과학 논문을 읽어야 합니다
-
-| author(s)    | title                                                  | date          | license      | link                                                                                                               |
-|--------------|--------------------------------------------------------|---------------|--------------|--------------------------------------------------------------------------------------------------------------------|
-| Ryan Donovan | You should be reading academic computer science papers | April 7, 2022 | CC BY-SA 4.0 | [stackoverflow.blog](https://stackoverflow.blog/2022/04/07/you-should-be-reading-academic-computer-science-papers) |
-
-
 
 현업 프로그래머로서 여러분은 계속 배울 필요가 있습니다. 튜토리얼, 문서, 스택오버플로우 질문 등, 찾을 수 있는 모든 것이 코드를 작성하고 실력을 최신 상태로 유지하는 데 도움을 줍니다. 하지만 프로그래밍 실력을 개선하기 위해 얼마나 자주 학술 논문을 찾아보나요?
 

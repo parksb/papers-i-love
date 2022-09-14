@@ -20,6 +20,14 @@ interface Document {
   html: string;
 }
 
+interface MetaInfo {
+  authors: string;
+  title: string;
+  date: string;
+  license?: string;
+  link: string;
+}
+
 (async () => {
   const MARKDOWN_DIRECTORY_PATH: string = path.join(__dirname, '..');
   const DIST_DIRECTORY_PATH: string = path.join(__dirname, '../docs');
@@ -55,18 +63,47 @@ interface Document {
     })
     .use(mdCheckbox, {
       disabled: true,
-    })
+    });
 
-    const markdownToHtml = (markdown: string) => {
-      const preContents = '[[toc]]\n\n';
-      return md.render(`${preContents}${markdown}`);
+    const composeMetaInfo = (markdown: string): MetaInfo | null => {
+      try {
+        const frontMatters: string[] = markdown.match(/(-{3})([\s\S]+?)(\1)/)[2].match(/[^\r\n]+/g);
+        if (!frontMatters) return null;
+
+        return frontMatters.reduce((obj, info: string) => {
+          const kvp = info.match(/(.+?):(.+)/);
+          const key = kvp[1].replace(/\s/g, '');
+          const value = kvp[2].replace(/['"]/g, '').trim();
+          obj[key] = value;
+          return obj;
+        }, {}) as MetaInfo;
+      } catch (e) {
+        return null;
+      }
     };
+
+    const stripFrontMatter = (markdown: string) => {
+      return markdown.replace(/(-{3})([\s\S]+?)(\1)/, '');
+    }
 
     const writeHtmlFromMarkdown = async (filename: string) => {
       const markdown = (await fs.readFile(`${MARKDOWN_DIRECTORY_PATH}/${filename}.md`)).toString();
-      const html = markdownToHtml(markdown);
+      const markdownWithoutFrontMatter = stripFrontMatter(markdown).trim();
+      const titleKor = markdownWithoutFrontMatter.match(/^#\s.*/)[0].replace(/^#\s/, '');;
 
-      const document: Document = { title: markdown.match(/^#\s.*/)[0].replace(/^#\s/, ''), filename, html };
+      const metaInfo = composeMetaInfo(markdown);
+      let preContents = '';
+      if (metaInfo) {
+        const { authors, title, date, license, link } = metaInfo;
+        const h = '| author(s)  | title    | date    ' + (license ? '| license    ' : '') + '| link    |'
+        const d = '|------------|----------|---------' + (license ? '|------------' : '') + '|---------|'
+        const c = `| ${authors} | ${title} | ${date} ` + (license ? `| ${license} ` : '') + `| ${link} |`;
+        preContents += `${h}\n${d}\n${c}`;
+      }
+      preContents += `\n\n[[toc]]`;
+
+      const html = md.render(`${preContents}\n\n${markdownWithoutFrontMatter}`);
+      const document: Document = { title: titleKor, filename, html };
 
       fs.writeFile(`${DIST_DIRECTORY_PATH}/${filename}.html`, ejs.render(String(TEMPLATE_FILE_PATH), { document }));
 

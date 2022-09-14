@@ -1,8 +1,11 @@
-# 논문 읽는 방법
+---
+authors: "S. Keshav"
+title: "How to Read a Paper"
+date: "February 17, 2016"
+link: "[svr-sk818-web.cl.cam.ac.uk](https://svr-sk818-web.cl.cam.ac.uk/keshav/papers/07/paper-reading.pdf)"
+---
 
-| author(s) | title               | date              | link                                                                                                |
-|-----------|---------------------|-------------------|-----------------------------------------------------------------------------------------------------|
-| S. Keshav | How to Read a Paper | February 17, 2016 | [svr-sk818-web.cl.cam.ac.uk](https://svr-sk818-web.cl.cam.ac.uk/keshav/papers/07/paper-reading.pdf) |
+# 논문 읽는 방법
 
 ## 초록
 

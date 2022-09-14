@@ -1,8 +1,12 @@
-# 다이나모: 아마존의 고가용성 키-값 저장소
+---
+authors: "Giuseppe DeCandia et al."
+title: "Dynamo: Amazon’s Highly Available Key-value Store"
+date: "2007"
+license: "CC BY-NC-SA 3.0"
+link: "[citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.1568&rep=rep1&type=pdf)"
+---
 
-| author(s)                | title                                             | date | license         | link                                                                                                          |
-|--------------------------|---------------------------------------------------|------|-----------------|---------------------------------------------------------------------------------------------------------------|
-| Giuseppe DeCandia et al. | Dynamo: Amazon’s Highly Available Key-value Store | 2007 | CC BY-NC-SA 3.0 | [citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.1568&rep=rep1&type=pdf) |
+# 다이나모: 아마존의 고가용성 키-값 저장소
 
 ## 초록
 
