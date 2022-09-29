@@ -1,12 +1,16 @@
-# 함수형 프로그래밍을 위한 모나드 (작성중)
+---
+authors: "Philip Wadler"
+title: "Monads for functional programming"
+date: "1993"
+license: "CC BY-NC-SA 3.0"
+link: "[homepages.inf.ed.ac.uk](https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf)"
+---
 
-| author(s)     | title                             | date | link                                                                                                             |
-| ------------- | --------------------------------- | ---- | ---------------------------------------------------------------------------------------------------------------- |
-| Philip Wadler | Monads for functional programming | 1993 | [https://homepages.inf.ed.ac.uk/wadler/](https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf) |
+# 함수형 프로그래밍을 위한 모나드 (작성중)
 
 ## 초록
 
-모나드를 사용하여 함수형 프로그램을 구조화하는 방법이 설명됩니다. 모나드는 다른 언어에서 발견되는 효과를 시뮬레이션하기에 적합한 프레임워크를 제공합니다. 전역 상태, 예외 처리, 출력 또는 비결정성 등의 효과입니다. 세 가지 케이스 스터디를 통해 자세히 살펴볼 것입니다. 모나드가 간단한 평가자 (simple evaluator) 를 수정하는 데 어떻게 도움이 되는지, 모나드가 재사용 가능한 배열의 데이터 형식의 기반이 되는지, 모나드를 사용하여 파서를 작성하는 방법에 대해 살펴보겠습니다.
+이 논문은 모나드를 사용하여 함수형 프로그램을 구조화하는 방법을 설명합니다. 모나드는 다른 언어들에서 발견되는 효과(effect)를 시뮬레이션하기에 적합한 프레임워크를 제공합니다. 전역 상태, 예외 처리, 출력 또는 비결정성 등의 효과입니다. 세 가지 케이스 스터디를 통해 자세히 살펴볼 것입니다. 1) 모나드가 간단한 평가자 (simple evaluator) 를 수정하는 데 어떻게 도움이 되는지, 2) 모나드가 재사용 가능한 배열의 데이터 형식의 기반이 되는지, 3) 모나드를 사용하여 파서를 작성하는 방법에 대해 살펴보겠습니다.
 
 ## 서론
 
